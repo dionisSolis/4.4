@@ -1,0 +1,33 @@
+using System;
+namespace Giga
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random random = new Random();
+            int[,] array =
+            {
+                {random.Next(10),  random.Next(10), random.Next(10)},
+                {random.Next(10),  random.Next(10), random.Next(10)},
+                {random.Next(10),  random.Next(10), random.Next(10)}
+            };
+            int sumThirdString = 0, compositionFirstColumn = 1;
+
+            for (int i = 0; i < 3; i++)
+            {
+                sumThirdString += array[2, i];
+                compositionFirstColumn *= array[i, 0];
+                
+                for (int j = 0; j < 3; j++)
+                { 
+                    Console.Write(array[i, j] + " ");
+                }
+                
+                Console.WriteLine();
+            }
+
+            Console.WriteLine($"Сумма 3ей строки - {sumThirdString}, произведение 1го столбца - {compositionFirstColumn}");
+        }
+    }
+}
