@@ -8,9 +8,9 @@ namespace Giga
             Random random = new Random();
             int[,] array =
             {
-                {random.Next(10),  random.Next(10), random.Next(10)},
-                {random.Next(10),  random.Next(10), random.Next(10)},
-                {random.Next(10),  random.Next(10), random.Next(10)}
+                {random.Next(10), random.Next(10), random.Next(10)},
+                {random.Next(10), random.Next(10), random.Next(10)},
+                {random.Next(10), random.Next(10), random.Next(10)}
             };
             int sumThirdString = 0, compositionFirstColumn = 1;
 
